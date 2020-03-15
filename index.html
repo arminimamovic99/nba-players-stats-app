@@ -3,15 +3,43 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NBA Stats!</title>
+    <title>NBA Players Info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #3498db;
+        }
+    </style>
 </head>
 <body>
-    <form action="#">
-        <input type="text" name="name" id="name"><br/>
-        <button onclick="search();">Search</button>
-    </form>
+    <div class="ml-5">
+        <form action="#">
+            <input type="text" id="name" placeholder="Search for a player by their last name" 
+            class="mt-2 w-2/4 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"><br/>
+    
+            <button class="mt-2 bg-white text-blue-600 hover:bg-blue-600 hover:text-white text-white font-bold py-2 px-4 rounded-full"
+            onclick="search();">Search</button>
+        </form>
+
+        <div id="player"></div>
+        
+        <div id="ex1" class="modal">
+            <p>Thanks for clicking. That felt good.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="main.js"></script>
+        <!--jQuery Modal-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> 
+
+    </div>
+
 </body>
 </html>
