@@ -28,7 +28,7 @@ const search = () => {
             // Render into HTML with jQuery
             $.each(players, (players, player) => {
                 output += `
-                    <div class="w-2/4 mt-5 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="w-2/4 mt-5 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b-lg lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                         <div class="font-bold mb-2">
                             <h2 class='text-blue-600 text-2xl'>${player.firstName + ' ' + player.lastName}</h2>
                             <p class='text-blue-600 text-xs'>${player.dateOfBirth + ' | ' + player.country}</p>
