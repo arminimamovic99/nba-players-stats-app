@@ -1,5 +1,5 @@
 const baseUrl = 'https://www.balldontlie.io/api/v1/players?search='
-const baseUrlStats = 'https://www.balldontlie.io/api/v1/stats?per_page[]=60&seasons[]=2019&player_ids[]=';
+const baseUrlStats = 'https://www.balldontlie.io/api/v1/stats?per_page=100&seasons[]=2019&player_ids[]=';
 
 // TODO one modal per player
 /* TODO calculate player's stats average 
@@ -75,27 +75,26 @@ const detailStats = (id) => {
             let sumPts = points.reduce(function(a, b){
                 return a + b;
             }, 0);
-            let ptsAverage = Math.floor(sumPts / points.length)
+            let ptsAverage = (sumPts / points.length).toFixed(2)
             console.log(ptsAverage)
 
             // Calculates assists average
             let sumAst = assists.reduce(function(a, b){
                 return a + b;
             }, 0);
-            let astAverage = Math.floor(sumAst / assists.length)
+            let astAverage = (sumAst / assists.length).toFixed(2)
             console.log(astAverage)
 
             // Calculates rebounds average
             let sumReb = rebounds.reduce(function(a, b){
                 return a + b;
             }, 0);
-            let rebAverage = Math.floor(sumReb / rebounds.length)
-            console.log(astAverage)
+            let rebAverage = (sumReb / rebounds.length).toFixed(2)
+            console.log(rebAverage)
 
             modalOutput += `
                 <div class="font-bold mb-2">
                     <h2 class='text-blue-600 text-2xl'>2019-2020 Stats:</h2>
-                    <h2 class='text-blue-600 text-xs mt-2'>* Stats are rounded up to the nearest integer.</h2>
                 </div>
                 <table class="table-fixed w-full text-blue-600 mt-4">
                     <thead>
